@@ -1,0 +1,49 @@
+/* fonts import */
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
+
+
+body {
+	display : flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #FEF6FD;
+	color: blue ;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+h1 {
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 150px
+}
+
+/* faire un retour à la ligne entre chaque */
+/* mettre tous les boutons à la meme hauteur*/
+
+.bouton {
+	color: pink;
+	background-color: blue;
+	border-radius: 50px;
+	border: 2px solid blue;
+	padding: 5px 15px;
+}
+
+.bouton2, .bouton3, .bouton1 {
+	color: blue;
+	border-radius: 50px;
+}
+
+
+.question {
+	display: none;
+	grid-column: auto;
+}
+
+.active {
+	display: initial;
+}
+
+
+/* faire le reponsive
+@media (max-width:768px){
+}
+*/

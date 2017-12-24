@@ -2,11 +2,13 @@ var bouton = document.querySelector(".bouton");
 var bouton1 = document.querySelector(".bouton1");
 var bouton2 = document.querySelector(".bouton2");
 var bouton3 = document.querySelector(".bouton3");
+var bouton4 = document.querySelector(".bouton4");
 var formulaire = document.querySelector(".formulaire");
 var questionGen = document.querySelector(".question");
 var question1 = document.querySelector(".question1");
 var question2 = document.querySelector(".question2");
 var question3 = document.querySelector(".question3");
+var question4 = document.querySelector(".question4");
 var final = document.querySelector(".final");
 // var question1 = document.querySelector(".question1");
 
@@ -29,10 +31,19 @@ function changeQuestion(value){
 			question3.classList.add("active");
 			break;
 
-		case "question3":
-			question3.classList.remove("active");
-			final.classList.add("active");
-			break;
+			case "question3":
+				question3.classList.remove("active");
+				question4.classList.add("active");
+				break;
+
+		case "question4":
+				question4.classList.remove("active");
+				final.classList.add("active");
+				break;
+
+			case "final":
+						final.classList.add("active");
+						break;
 	}
 }
 
@@ -58,3 +69,7 @@ bouton3.addEventListener('click',function(e){
 	changeQuestion(bouton3.value);
 })
 
+bouton4.addEventListener('click',function(e){
+	e.preventDefault();
+	changeQuestion(bouton4.value);
+})

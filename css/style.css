@@ -1,6 +1,12 @@
 /* fonts import */
 @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
 
+h1 {
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 400%;
+	padding : 20px;
+}
 
 body {
 	display : flex;
@@ -9,50 +15,56 @@ body {
 	background-color: #FEF6FD;
 	color: blue ;
 	font-family: 'Barlow Condensed', sans-serif;
-}
-h1 {
-	font-variant: small-caps;
-	font-weight: bold;
-	font-size: 150px
+	font-size: 150%;
 }
 
-/* faire un retour à la ligne entre chaque */
-/* mettre tous les boutons à la meme hauteur*/
 
-.bouton {
+li {
+	list-style-type: none;
+}
+
+
+
+
+.bouton, .bouton2, .bouton3, .bouton1, .bouton4 {
 	color: pink;
 	background-color: blue;
 	border-radius: 50px;
 	border: 2px solid blue;
-	padding: 5px 15px;
+	padding: 10px 15px 10px 15px;
 }
 
-.bouton2, .bouton3, .bouton1 {
-	color: blue;
-	border-radius: 50px;
-}
+
+	/* mettre tous les boutons à la meme hauteur*/
 
 
 .question {
 	display: none;
-	grid-column: auto;
+	/* grid-column: auto;*/
 }
 
 .active {
 	display: initial;
+}
+
+
+.corps {
+	padding : 10px 200px 100px 200px;
+}
+
+
+.onvoitpas{
+	display : none;
+}
+
+
+.Grosbouton {
+		max-width: 0%;
+		height: auto;
+		align: center;
 }
 
 
 /* faire le reponsive
 @media (max-width:768px){
-}
-*/
-
-
-.question {
-	display: none;
-}
-
-.active {
-	display: initial;
-}
+}*/

@@ -16,6 +16,7 @@ var question5 = document.querySelector(".question5");
 var question6 = document.querySelector(".question6");
 var question7 = document.querySelector(".question7");
 var final = document.querySelector(".final");
+var imageFinal =  document.querySelector(".final img");
 
 var texteFinal = document.querySelector(".final p");
 
@@ -137,6 +138,30 @@ function changeQuestion(value){
 	}
 }
 
+function findData(type){
+	var request = new XMLHttpRequest();
+
+	request.onreadystatechange = function(){
+		if(request.readyState==4 && request.status==200){
+			var urls = JSON.parse(request.responseText);
+			console.log(urls);
+			for(var i =0;i<6;i++){
+			// 	stats.forEach(function(){
+				console.log(urls['types'][i]['name']);
+				if(type==urls['types'][i]['name']){
+					var urlFinal = urls['types'][i]['url'];
+					imageFinal.setAttribute('src', 'http://jeremyratsimandresy.com/imagesShiba/'+urlFinal);
+					break;
+				}
+				//span1[i].innerHTML=datas['class'][number]['stats'][i];
+			// 	})
+			}
+		}
+	}
+	request.open('POST','http://jeremyratsimandresy.com/shibs.html', true);
+	request.send();
+}
+
 
 bouton.addEventListener('click',function(e){
 	e.preventDefault();
@@ -207,4 +232,9 @@ bouton7.addEventListener('click',function(e){
 	console.log(reponse);
 	console.log(valMax);
 	texteFinal.innerHTML+=reponse;
+	findData(reponse);
+	// var oui = '{"types":{"name":"impatient","url":"impatient.gif"},{"name":"maladroit","url":"maladroit.gif"},{"name":"pro","url":"leprosurlinkedIn.gif"},{"name":"tendre","url":"tendre.gif"},{"name":"timide","url":"timide.gif"},{"name":"vnr","url":"vnr.gif"},};';
+	// var stringifyOui = JSON.stringify(oui);
+	// var jsonOui = JSON.parse(stringifyOui);
+	// console.log(jsonOui);
 })

@@ -5,7 +5,6 @@ h1 {
 	font-variant: small-caps;
 	font-weight: bold;
 	font-size: 400%;
-	padding : 20px;
 }
 
 body {
@@ -26,25 +25,57 @@ li {
 
 
 
-.bouton, .bouton2, .bouton3, .bouton1, .bouton4 {
+.bouton, .bouton2, .bouton3, .bouton1, .bouton4, .bouton5, .bouton6, .bouton7{
 	color: pink;
 	background-color: blue;
-	border-radius: 50px;
+	border-radius: 5px;
 	border: 2px solid blue;
+	font-family: 'Barlow Condensed', sans-serif;
+
 	padding: 10px 15px 10px 15px;
 }
 
+.bouton:hover, .bouton2:hover, .bouton3:hover, .bouton1:hover, .bouton4:hover, .bouton5:hover, .bouton6:hover, .bouton7:hover {
+	animation-duration: 1s;
+	animation-name: changecouleur;
+}
 
-	/* mettre tous les boutons à la meme hauteur*/
+@keyframes changecouleur {
+  from {
+		color: pink;
+		background-color: blue;
+		border: 2px solid blue;
+		border-radius: 5px;
+  }
+
+  50% {
+		color: blue;
+		background-color: pink;
+		border: 2px solid pink;
+		border-radius: 25px;
+  }
+
+	to {
+		{
+			color: pink;
+			background-color: blue;
+			border: 2px solid blue;
+			border-radius: 50px;
+	  }
+	}
+}
 
 
 .question {
 	display: none;
-	/* grid-column: auto;*/
 }
 
 .active {
 	display: initial;
+}
+
+.onvoit {
+	font-size: 50px;
 }
 
 
@@ -65,6 +96,14 @@ li {
 }
 
 
-/* faire le reponsive
-@media (max-width:768px){
-}*/
+@media (max-width : 768px){
+
+	h1 {
+		font-size: 250%;
+	}
+
+body {
+	font-size: 110%;
+}
+
+}

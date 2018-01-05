@@ -33,9 +33,6 @@ var compteVnr=0;
 var valMax=0;
 var reponse;
 
-// var question1 = document.querySelector(".question1");
-
-
 function compte(value){
 	switch(value){
 
@@ -144,21 +141,18 @@ function findData(type){
 	request.onreadystatechange = function(){
 		if(request.readyState==4 && request.status==200){
 			var urls = JSON.parse(request.responseText);
-			console.log(urls);
+			// console.log(urls);
 			for(var i =0;i<6;i++){
-			// 	stats.forEach(function(){
-				console.log(urls['types'][i]['name']);
+				// console.log(urls['types'][i]['name']);
 				if(type==urls['types'][i]['name']){
 					var urlFinal = urls['types'][i]['url'];
 					imageFinal.setAttribute('src', 'http://jeremyratsimandresy.com/imagesShiba/'+urlFinal);
 					break;
 				}
-				//span1[i].innerHTML=datas['class'][number]['stats'][i];
-			// 	})
 			}
 		}
 	}
-	request.open('POST','http://jeremyratsimandresy.com/shibs.html', true);
+	request.open('GET','http://jeremyratsimandresy.com/shibs.html', true);
 	request.send();
 }
 
@@ -171,70 +165,67 @@ bouton.addEventListener('click',function(e){
 bouton1.addEventListener('click',function(e){
 	e.preventDefault();
 	var val1 = document.querySelector(".formulaire input[name='question1']:checked");
-	console.log(val1.value);
+	// console.log(val1.value);
 	compte(val1.value); 
 	changeQuestion(bouton1.value);
-	console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
+	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton2.addEventListener('click',function(e){
 	e.preventDefault();
 	var val2 = document.querySelector(".formulaire input[name='question2']:checked");
-	console.log(val2.value);
+	// console.log(val2.value);
 	compte(val2.value)
 	changeQuestion(bouton2.value);
-	console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
+	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton3.addEventListener('click',function(e){
 	e.preventDefault();
 	var val3 = document.querySelector(".formulaire input[name='question3']:checked");
-	console.log(val3.value);
+	// console.log(val3.value);
 	compte(val3.value);
 	changeQuestion(bouton3.value);
-	console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
+	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton4.addEventListener('click',function(e){
 	e.preventDefault();
 	var val4= document.querySelector(".formulaire input[name='question4']:checked");
-	console.log(val4.value);
+	// console.log(val4.value);
 	compte(val4.value);
 	changeQuestion(bouton4.value);
-	console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
+	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton5.addEventListener('click',function(e){
 	e.preventDefault();
 	var val5 = document.querySelector(".formulaire input[name='question5']:checked");
-	console.log(val5.value);
+	// console.log(val5.value);
 	compte(val5.value);
 	changeQuestion(bouton5.value);
-	console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
+	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton6.addEventListener('click',function(e){
 	e.preventDefault();
 	var val6 = document.querySelector(".formulaire input[name='question6']:checked");
-	console.log(val6.value);
+	// console.log(val6.value);
 	compte(val6.value);
 	changeQuestion(bouton6.value);
-	console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
+	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton7.addEventListener('click',function(e){
 	e.preventDefault();
 	var val7 = document.querySelector(".formulaire input[name='question7']:checked");
-	console.log(val7.value);
+	// console.log(val7.value);
 	compte(val7.value);
 	changeQuestion(bouton7.value);
-	console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
-	console.log(reponse);
-	console.log(valMax);
+	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
+	// console.log(reponse);
+	// console.log(valMax);
 	texteFinal.innerHTML+=reponse;
 	findData(reponse);
-	// var oui = '{"types":{"name":"impatient","url":"impatient.gif"},{"name":"maladroit","url":"maladroit.gif"},{"name":"pro","url":"leprosurlinkedIn.gif"},{"name":"tendre","url":"tendre.gif"},{"name":"timide","url":"timide.gif"},{"name":"vnr","url":"vnr.gif"},};';
-	// var stringifyOui = JSON.stringify(oui);
-	// var jsonOui = JSON.parse(stringifyOui);
-	// console.log(jsonOui);
+
 })

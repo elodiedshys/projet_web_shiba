@@ -38,6 +38,7 @@ li {
 .bouton:hover, .bouton2:hover, .bouton3:hover, .bouton1:hover, .bouton4:hover, .bouton5:hover, .bouton6:hover, .bouton7:hover {
 	animation-duration: 1s;
 	animation-name: changecouleur;
+	animation-fill-mode: forwards;
 }
 
 @keyframes changecouleur {
@@ -56,12 +57,12 @@ li {
   }
 
 	to {
-		{
+		
 			color: pink;
 			background-color: blue;
 			border: 2px solid blue;
 			border-radius: 50px;
-	  }
+	  
 	}
 }
 

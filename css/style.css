@@ -25,7 +25,7 @@ li {
 
 
 
-.bouton, .bouton2, .bouton3, .bouton1, .bouton4, .bouton5, .bouton6, .bouton7{
+.bouton{
 	color: pink;
 	background-color: blue;
 	border-radius: 5px;
@@ -35,10 +35,14 @@ li {
 	padding: 10px 15px 10px 15px;
 }
 
-.bouton:hover, .bouton2:hover, .bouton3:hover, .bouton1:hover, .bouton4:hover, .bouton5:hover, .bouton6:hover, .bouton7:hover {
-	animation-duration: 1s;
+.bouton:hover {
+	animation-duration: 0.5s;
 	animation-name: changecouleur;
 	animation-fill-mode: forwards;
+}
+
+.active {
+	
 }
 
 @keyframes changecouleur {
@@ -58,21 +62,27 @@ li {
 
 	to {
 		
-			color: pink;
-			background-color: blue;
-			border: 2px solid blue;
-			border-radius: 50px;
+		color: pink;
+		background-color: blue;
+		border: 2px solid blue;
+		border-radius: 50px;
 	  
 	}
 }
 
 
+
+
 .question {
 	display: none;
+	visibility: hidden
 }
 
 .active {
-	display: initial;
+	display: block;
+	visibility: visible;
+	animation: fadeIn 3s;
+	animation-timing-function: ease-out;
 }
 
 .onvoit {
@@ -90,44 +100,61 @@ li {
 }
 
 
-.Grosbouton {
+/*.Grosbouton {
 		max-width: 0%;
 		height: auto;
 		align: center;
+}*/
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		margin-top: 50px;
+	}
+
+	50%	{	
+		opacity: 1;
+		margin-top: 15px;
+
+	}
+
+	100% {
+		margin-top: 0;
+	}
 }
 
 
 @media screen and (max-width: 768px) {
 
-h1 {
-		font-size: 600%;
-		font-family: 'Barlow Condensed';
-		font-weight: bolder;
+	h1 {
+			font-size: 600%;
+			font-family: 'Barlow Condensed';
+			font-weight: bolder;
+		}
+
+	h4, h3, .bouton{
+			font-weight: lighter;
+			font-size: 125%;
+			margin: 10px -110px 10px -110px;
 	}
 
-h4, h3, .bouton{
-		font-weight: lighter;
-		font-size: 125%;
-		margin: 10px -110px 10px -110px;
-}
+	body {
+		font-size: 100%;
+	  display: -webkit-flex;
+	  display: flex;
+	}
 
-body {
-	font-size: 100%;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.formulaire {
-	font-size: 140%;
-	margin: 0px -110px 0px -110px;
-}
+	.formulaire {
+		font-size: 140%;
+		margin: 0px -110px 0px -110px;
+	}
 
 
-.onvoit {
-	font-size: 235%;
-	align-self: center;
-	margin : -30px 0px 20px 0px;
-}
+	.onvoit {
+		font-size: 235%;
+		align-self: center;
+		margin : -30px 0px 20px 0px;
+	}
 
 
 }

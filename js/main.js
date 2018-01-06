@@ -56,7 +56,7 @@ function compte(value){
 			comptePro++;
 			if (comptePro>valMax){
 				valMax=comptePro;
-				reponse="pro de LinkedIn";
+				reponse="pro";
 			}
 			break;
 

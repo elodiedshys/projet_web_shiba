@@ -52,11 +52,11 @@ function compte(value){
 			}
 			break;
 
-		case "pro":
+		case "professionnel":
 			comptePro++;
 			if (comptePro>valMax){
 				valMax=comptePro;
-				reponse="pro";
+				reponse="professionnel";
 			}
 			break;
 
@@ -76,11 +76,11 @@ function compte(value){
 			}
 			break;
 
-		case "vnr":
+		case "grognon":
 			compteVnr++;
 			if (compteVnr>valMax){
 				valMax=compteVnr;
-				reponse="vnr";
+				reponse="grognon";
 			}
 			break;
 	}
@@ -143,7 +143,7 @@ function findData(type){
 			var urls = JSON.parse(request.responseText);
 			// console.log(urls);
 			for(var i =0;i<6;i++){
-				// console.log(urls['types'][i]['name']);
+				console.log(urls['types'][i]['name']);
 				if(type==urls['types'][i]['name']){
 					var urlFinal = urls['types'][i]['url'];
 					imageFinal.setAttribute('src', 'http://jeremyratsimandresy.com/imagesShiba/'+urlFinal);
@@ -223,7 +223,7 @@ bouton7.addEventListener('click',function(e){
 	compte(val7.value);
 	changeQuestion(bouton7.value);
 	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
-	// console.log(reponse);
+	console.log(reponse);
 	// console.log(valMax);
 	texteFinal.innerHTML+=reponse;
 	findData(reponse);

@@ -4,8 +4,8 @@
 h1 {
 	font-variant: small-caps;
 	font-weight: bold;
-	font-size: 8em;
-	margin-top: 0.15em;
+	font-size: 6em;
+	margin: 0.2em;
 }
 
 h4 {
@@ -23,7 +23,7 @@ body {
 	background-color: #FEF6FD;
 	color: blue ;
 	font-family: 'Barlow Condensed', sans-serif;
-	font-size: 120%;
+	font-size: 130%;
 }
 
 
@@ -48,9 +48,7 @@ li {
 	animation-fill-mode: forwards;
 }
 
-.active {
 
-}
 
 @keyframes changecouleur {
   from {
@@ -91,15 +89,14 @@ li {
 }
 
 .onvoit {
-	font-size: 3em;
-	margin-top: -50px;
+	font-size: 2em;
+	margin: 0.3em;
 }
 
 
 .corps {
-	padding : 0em 15em 0em 15em;
+	margin : 0em 10em 0em 10em;
 }
-
 
 .recharge {
 	display: inherit;
@@ -134,7 +131,7 @@ li {
 @media screen and (max-width: 768px) {
 
 	h1 {
-			font-size: 7em;
+			font-size: 6em;
 			font-family: 'Barlow Condensed';
 			font-weight: bolder;
 			margin-top: 0.15em;
@@ -142,7 +139,7 @@ li {
 
 	h4 {
 		font-size: 1.5em;
-		margin-top: -0.5em;
+		margin-top: 0em;
 	}
 
 
@@ -152,7 +149,7 @@ li {
 	}
 
 	body {
-		font-size: 110%;
+		font-size: 120%;
 	  display: -webkit-flex;
 	  display: flex;
 	}
@@ -162,18 +159,18 @@ li {
 	}
 
 	.corps {
-		padding : 0em 7em 0em 7em;
+		margin: 0em 3em 0em 3em;
 	}
 
 
 	.onvoit {
-		font-size: 2.4em;
+		font-size: 2em;
 		align-self: center;
-		margin-top : -30px;
+		margin: 0.2em;
 	}
 
-	.imagestyle {
-	    margin: 0em 3em 0em 3em;
+	.final{
+		text-align: center;
 	}
 
 }

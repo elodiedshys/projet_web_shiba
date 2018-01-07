@@ -43,7 +43,7 @@ li {
 }
 
 .bouton:hover {
-	animation-duration: 0.5s;
+	animation-duration: 1s;
 	animation-name: changecouleur;
 	animation-fill-mode: forwards;
 }
@@ -86,7 +86,7 @@ li {
 .active {
 	display: block;
 	visibility: visible;
-	animation: fadeIn 3s;
+	animation: fadeIn 1.5s;
 	animation-timing-function: ease-out;
 }
 
@@ -100,12 +100,16 @@ li {
 	padding : 0em 15em 0em 15em;
 }
 
-.onvoitpas{
-	display : none;
+
+.recharge {
+	display: inherit;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3%;
 }
 
-.imagestyle {
-    margin-left: 18%;
+.final{
+	text-align: center;
 }
 
 @keyframes fadeIn {

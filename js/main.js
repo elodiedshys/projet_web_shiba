@@ -6,6 +6,7 @@ var bouton4 = document.querySelector(".bouton4");
 var bouton5 = document.querySelector(".bouton5");
 var bouton6 = document.querySelector(".bouton6");
 var bouton7 = document.querySelector(".bouton7");
+var boutonRecharge = document.querySelector(".recharge");
 var formulaire = document.querySelector(".formulaire");
 var questionGen = document.querySelector(".question");
 var question1 = document.querySelector(".question1");
@@ -227,5 +228,11 @@ bouton7.addEventListener('click',function(e){
 	// console.log(valMax);
 	texteFinal.innerHTML+=reponse;
 	findData(reponse);
+
+})
+
+boutonRecharge.addEventListener('click',function(e){
+	e.preventDefault();
+	window.location.reload();
 
 })

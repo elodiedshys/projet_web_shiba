@@ -21,8 +21,6 @@ var imageFinal =  document.querySelector(".final img");
 
 var texteFinal = document.querySelector(".final p");
 
-//Initialisation variable qui vont compter le nombres de réponses propre à
-//chaque résultat
 
 var compteImpatient=0;
 var compteMaladroit=0;
@@ -136,15 +134,13 @@ function changeQuestion(value){
 	}
 }
 
-function findData(type){
+function findUrl(type){
 	var request = new XMLHttpRequest();
 
 	request.onreadystatechange = function(){
 		if(request.readyState==4 && request.status==200){
 			var urls = JSON.parse(request.responseText);
-			// console.log(urls);
 			for(var i =0;i<6;i++){
-				console.log(urls['types'][i]['name']);
 				if(type==urls['types'][i]['name']){
 					var urlFinal = urls['types'][i]['url'];
 					imageFinal.setAttribute('src', 'http://jeremyratsimandresy.com/imagesShiba/'+urlFinal);
@@ -166,73 +162,55 @@ bouton.addEventListener('click',function(e){
 bouton1.addEventListener('click',function(e){
 	e.preventDefault();
 	var val1 = document.querySelector(".formulaire input[name='question1']:checked");
-	// console.log(val1.value);
 	compte(val1.value); 
 	changeQuestion(bouton1.value);
-	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton2.addEventListener('click',function(e){
 	e.preventDefault();
 	var val2 = document.querySelector(".formulaire input[name='question2']:checked");
-	// console.log(val2.value);
 	compte(val2.value)
 	changeQuestion(bouton2.value);
-	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton3.addEventListener('click',function(e){
 	e.preventDefault();
 	var val3 = document.querySelector(".formulaire input[name='question3']:checked");
-	// console.log(val3.value);
 	compte(val3.value);
 	changeQuestion(bouton3.value);
-	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton4.addEventListener('click',function(e){
 	e.preventDefault();
 	var val4= document.querySelector(".formulaire input[name='question4']:checked");
-	// console.log(val4.value);
 	compte(val4.value);
 	changeQuestion(bouton4.value);
-	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton5.addEventListener('click',function(e){
 	e.preventDefault();
 	var val5 = document.querySelector(".formulaire input[name='question5']:checked");
-	// console.log(val5.value);
 	compte(val5.value);
 	changeQuestion(bouton5.value);
-	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton6.addEventListener('click',function(e){
 	e.preventDefault();
 	var val6 = document.querySelector(".formulaire input[name='question6']:checked");
-	// console.log(val6.value);
 	compte(val6.value);
 	changeQuestion(bouton6.value);
-	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
 })
 
 bouton7.addEventListener('click',function(e){
 	e.preventDefault();
 	var val7 = document.querySelector(".formulaire input[name='question7']:checked");
-	// console.log(val7.value);
 	compte(val7.value);
 	changeQuestion(bouton7.value);
-	// console.log("Impatient : "+compteImpatient+" Vnr : "+compteVnr+" Timide : "+compteTimide+" Tendre : "+compteTendre+" Pro : "+comptePro+" Maladroit : "+compteMaladroit);
-	console.log(reponse);
-	// console.log(valMax);
 	texteFinal.innerHTML+=reponse;
-	findData(reponse);
-
+	findUrl(reponse);
 })
 
 boutonRecharge.addEventListener('click',function(e){
 	e.preventDefault();
 	window.location.reload();
-
 })
